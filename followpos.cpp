@@ -302,8 +302,6 @@ void compute_followpos(string postfix, int charCount){
         }
       }
     }
-  
-    //display_stack(poscalc_stack);
   }
   
   //display followpos
@@ -316,26 +314,4 @@ void compute_followpos(string postfix, int charCount){
     cout<<" }"<<endl;
   }
     
-}
-
-void display_stack(stack<Foo> foo){
-  cout<<"Stack size: "<<foo.size()<<endl;
-  do{
-    Foo f = foo.top();
-    vector<int> x = f.firstpos;
-    vector<int> y = f.lastpos;
-    cout<<"symbol: "<<f.symbol<<endl;
-    cout<<"FP: ";
-    for(int i =0; i< x.size(); i++){
-      cout<<x[i]<<" ";
-    }
-    cout<<endl;
-    cout<<"LP: ";
-    for(int i =0; i< y.size(); i++){
-      cout<<y[i]<<" ";
-    }
-    cout<<endl;
-    foo.pop();
-  }while(!foo.empty());
-  
 }
