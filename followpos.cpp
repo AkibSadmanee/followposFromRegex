@@ -17,7 +17,6 @@ void compute_followpos(string postfix, int charCount);
 vector<int> compute_fpos(char sym, Foo c1,Foo c2);
 vector<int> compute_lpos(char sym, Foo c1,Foo c2);
 bool check_nullable(char sym, bool c1, bool c2);
-void display_stack(stack<Foo> foo);
 
 
 int main(){
