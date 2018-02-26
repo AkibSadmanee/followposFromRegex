@@ -57,30 +57,30 @@ bool is_valid(string input){
     //if start with symbol
     if( input[0] == '.' || input[0] == '|' || 
         input[0] == '#' || input[0] == ')' ||
-        input[0] == '*' || input[0] == '+' ) {cout<<"1"<<endl; return false;} 
+        input[0] == '*' || input[0] == '+' ) return false;
 
     //if doesn't end with #
-    if(input[input.size() -1] != '#')  {cout<<"2"<<endl; return false;} 
+    if(input[input.size() -1] != '#')  return false;
 
     //no concatination sign before #
     if( input[i] == '#' && 
-        (input[i-1] != '.' || (i != input.size() -1)) ) {cout<<"3"<<endl; return false;} 
+        (input[i-1] != '.' || (i != input.size() -1)) ) return false;
 
     //concatination & or adjacently
     if( (input[i] == '.' || input[i] == '|' ) &&
-        (input[i-1] == '|' || input[i-1] == '.') ) {cout<<"4"<<endl; return false;} 
+        (input[i-1] == '|' || input[i-1] == '.') ) return false;
 
     //* or + is not after valid character
     if( input[i-1] == '.' && 
-        (input[i] == '*' || input[i] == '+') ) {cout<<"5"<<endl; return false;} 
+        (input[i] == '*' || input[i] == '+') ) return false;
 
     //not valid character to start an expression after '('
     if( input[i-1] == '(' && 
-        (input[i] == '.' || input[i] == '|' || input[i] == '*' || input[i] == '+') ) {cout<<"6"<<endl; return false;} 
+        (input[i] == '.' || input[i] == '|' || input[i] == '*' || input[i] == '+') ) return false;
     
     //cases |* or |+ or ** or *+ or +* or ++ 
     if( (input[i-1] == '|' || input[i-1] == '*' || input[i-1] == '+') && 
-        (input[i] == '*' || input[i] == '+') ) {cout<<"7"<<endl; return false;} 
+        (input[i] == '*' || input[i] == '+') ) return false;
     
     //if 2 letters adjacently withpout concatination
     if( ((input[i] >='a' && input[i] <= 'z') ||
