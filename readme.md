@@ -8,7 +8,7 @@
   <li>'*' or '+' after a symbol and not a character</li>
   <li>symbol and not a character after '('</li>
   <li>cases |* or |+ or ** or *+ or +* or ++ </li>
-  <li>if 2 letters adjacently withpout concatination sign ('.')</li>
+  <li>if 2 letters are placed adjacently withpout concatination sign ('.')</li>
   <li>if parentheses are not balanced</li>
   
 </ul>
